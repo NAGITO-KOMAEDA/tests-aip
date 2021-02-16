@@ -1,4 +1,4 @@
-sedef task_1(two_dim_words):
+def task_1(two_dim_words):
     """
         Здесь должен быть ваш код.
         Переменная two_dim_words - ваш двумерный список.
@@ -83,7 +83,7 @@ def task_5(lst1, lst2):
         """
     lst1 = set(lst1)
     lst2 = set(lst2)
-    diff = lst1.symmetric_difference(lst2)
+    diff = lst1.difference(lst2)
     diff = list(diff)
     diff.sort(reverse=False)
     print(diff)
