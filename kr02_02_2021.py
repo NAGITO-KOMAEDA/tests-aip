@@ -18,8 +18,8 @@ def task_1(two_dim_words):
 
 
     sorted_words = f(two_dim_words)
-    sorted_words.sort(reverse=False)
-    sorted_words.sort(reverse=False)
+    sorted_words.sort()
+    sorted_words.sort(key=len, reverse=True)
     print(sorted_words)
 
 
