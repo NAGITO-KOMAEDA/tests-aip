@@ -5,6 +5,10 @@ def task_1(two_dim_words):
         Заполнять список значениями не нужно.
         Финальное значение должно быть помещено в переменную sorted_words.
         """
+    sorted_words = []
+    for i in two_dim_words:
+        sorted_words.append(tuple(i))
+    print(sorted_words)
 
     return sorted_words
 
@@ -15,6 +19,15 @@ def task_3(numbers):
         Переменная numbers - ваша строка чисел.
         Финальное значение должно быть помещено в переменную dict_min.
         """
+    slovar = []
+    dict_min = {}
+    for i in numbers:
+        slovar.append(i)
+        for kolichestvo in slovar:
+                dict_min[i] = slovar.count(kolichestvo)
+
+    print(dict_min)
+
 
     return dict_min
 
@@ -55,6 +68,12 @@ def task_5(lst1, lst2):
         Переменные lst1 и lst2 - два данных списка.
         Финальное значение должно быть помещено в переменную diff.
         """
+    lst1 = set(lst1)
+    lst2 = set(lst2)
+    diff = lst1.symmetric_difference(lst2)
+    diff = list(diff)
+    diff.sort(reverse=False)
+    print(diff)
 
     return diff
 
@@ -65,6 +84,8 @@ def task_6(lst):
         Переменная lst - ваш список.
         Финальное значение должно быть помещено в переменную res.
         """
-
+    lst.sort(reverse=True)
+    res = tuple(lst)
+    print(res)
     return res
 
