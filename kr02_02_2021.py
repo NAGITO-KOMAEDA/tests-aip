@@ -5,10 +5,23 @@ def task_1(two_dim_words):
         Заполнять список значениями не нужно.
         Финальное значение должно быть помещено в переменную sorted_words.
         """
-    sorted_words = []
-    for i in two_dim_words:
-        sorted_words.append(tuple(i))
+
+
+    def f(vxod):
+        spiso = []
+        for i in vxod:
+            if type(i) != list:
+                spiso.append(i)
+            else:
+                spiso += f(i)
+        return spiso
+
+
+    sorted_words = f(two_dim_words)
+    sorted_words.sort()
+    sorted_words.sort(key=len)
     print(sorted_words)
+
 
     return sorted_words
 
