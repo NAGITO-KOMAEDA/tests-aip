@@ -98,7 +98,7 @@ def task_6(lst):
         Финальное значение должно быть помещено в переменную res.
         """
     lst.sort(reverse=True)
-    res = tuple(lst)
+    res = set(lst)
     print(res)
     return res
 
